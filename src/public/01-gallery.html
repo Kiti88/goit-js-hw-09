@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <!-- Підключення стилів бібліотеки SimpleLightbox -->
+    <link rel="stylesheet" href="node_modules/simplelightbox/dist/simple-lightbox.min.css">
+</head>
+
+<body>
+    <!-- Галерея зображень -->
+    <ul class="gallery">
+        <!-- Зображення будуть додані динамічно через JS -->
+    </ul>
+
+    <!-- Підключення скриптів -->
+    <script type="module" src="./gallery.js" defer></script>
+    <!-- Підключення бібліотеки SimpleLightbox -->
+    <script type="module">
+        import SimpleLightbox from 'simplelightbox';
+        import 'simplelightbox/dist/simple-lightbox.min.css';
+
+        // Ініціалізація бібліотеки після завантаження DOM
+        document.addEventListener('DOMContentLoaded', function () {
+            const lightbox = new SimpleLightbox('.gallery a');
+        });
+    </script>
+</body>
+
+</html>
